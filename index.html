@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <!-- Важно: подключаем тот tw.css, который уже рабочий -->
+    <link rel="stylesheet" href="/public/assets/tw.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andrey — Portfolio</title>
+    <meta name="description" content="Modern portfolio hub for clean UI projects." />
+    <meta name="color-scheme" content="dark" />
+  </head>
+  <!-- Фикс: bg-base (а не bg-baseBg) -->
+  <body class="antialiased bg-base text-slate-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
