@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Folder, Rocket, Mail } from "lucide-react";
+import { ArrowRight, Folder, Rocket, Mail, Github } from "lucide-react";
 import { useForm } from "react-hook-form";
 import clsx from "clsx";
 
@@ -57,15 +57,18 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-baseBg/80 backdrop-blur border-b border-white/5">
       <nav className="container max-w-screen flex items-center justify-between py-3">
-        <a href="/" className="font-semibold text-white">Andrey — Portfolio</a>
+        <a href="/" className="font-semibold text-white">Andrey Yehorenkov</a>
         <ul className="hidden md:flex items-center gap-6 text-sm">
           <li><a href="#projects" className="hover:text-white text-slate-300">Projects</a></li>
           <li><a href="#about" className="hover:text-white text-slate-300">About</a></li>
           <li><a href="#contact" className="hover:text-white text-slate-300">Contact</a></li>
         </ul>
         <div className="flex items-center gap-3">
-          <a href="#contact" className="hidden md:inline-block">
-            <Button variant="outline">Contact</Button>
+          <a href="https://github.com/kresherzo" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block">
+            <Button variant="ghost"><Github size={18} /></Button>
+          </a>
+          <a href="https://www.upwork.com/freelancers/~01bfe6ff4b1b9522d6" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block">
+            <Button variant="outline">Upwork</Button>
           </a>
           <a href="#projects">
             <Button>View work <ArrowRight size={16} /></Button>
@@ -85,36 +88,27 @@ function Hero() {
         <div>
           <p className="text-xs uppercase tracking-widest text-slate-400">Welcome</p>
           <h1 className="mt-2 text-4xl md:text-6xl font-semibold leading-tight text-white">
-            Front-End React Developer. I turn designs into fast, interactive websites.
+            Modern portfolio hub for clean UI projects.
           </h1>
           <p className="mt-4 text-slate-300 text-base md:text-lg">
-            Student at Czech Technical University (ČVUT). Specializing in React, TypeScript, 
-            and Tailwind CSS. Focused on pixel-perfect implementation and clean code.
+            Minimal, fast and accessible. Explore case studies and live demos.
           </p>
-          <p className="mt-4 text-sm text-slate-400">
-            Available for new projects — landings, dashboards, animations, API integrations, quick fixes.
-          </p>
-          <div className="mt-6 flex gap-3">
-            <a href="#projects"><Button variant="outline">See projects</Button></a>
-            <a href="#contact"><Button>Hire me on Upwork</Button></a>
-          </div>
+          <p className="mt-6 text-sm text-slate-400">
+  Available for new projects — landings, dashboards, animations, API integrations, quick fixes.
+</p>
+<div className="mt-4 flex gap-3">
+  <a href="#projects"><Button variant="outline">See projects</Button></a>
+  <a href="#contact"><Button>Contact me</Button></a>
+</div>
+
         </div>
 
         <div className={clsx(panel, "p-6 shadow-sm")}>
           <div className="text-sm text-slate-400">Highlights</div>
           <ul className="mt-4 space-y-3 text-sm text-slate-300">
-            <li className="flex items-center gap-2">
-              <span className="text-lg">⚡</span>
-              <span>Fast delivery (1-3 days for landing)</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-lg">💎</span>
-              <span>Pixel-perfect Figma to React</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-lg">🔧</span>
-              <span>Tech: React + TS + Tailwind</span>
-            </li>
+            <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-violet-400" /> Pixel-perfect responsive layouts</li>
+            <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-violet-400" /> 90+ Lighthouse (Desktop)</li>
+            <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-violet-400" /> React + TypeScript + Vite</li>
           </ul>
         </div>
       </div>
@@ -147,7 +141,7 @@ function Projects() {
   );
 }
 
-/* About — ширина как у остальных (полная ширина контейнера) */
+/* About */
 function About() {
   return (
     <Section id="about" title="About">
@@ -178,13 +172,16 @@ function About() {
           </p>
         </div>
 
-       
+        <p className="text-sm text-slate-400">
+          📍 Based in Prague, studying Computer Science at Czech Technical University.<br />
+          Open to contract work — let's build something clean and fast.
+        </p>
       </div>
     </Section>
   );
 }
 
-/* Contact — ширина как у остальных (полная ширина контейнера) */
+/* Contact */
 type FormData = { name?: string; email: string; message?: string; trap?: string };
 
 function Contact() {
@@ -238,7 +235,7 @@ function Contact() {
         <div>
           <label className="block text-sm mb-1 text-slate-300">Message</label>
           <textarea className={clsx(inputBase, "min-h-28 border-white/10 focus:border-violet-400")}
-                    placeholder="I’d like to discuss…" {...register("message")} />
+                    placeholder="Tell me about your project: goals, timeline, budget..." {...register("message")} />
         </div>
         <div className="flex items-center justify-between">
           <span className="text-xs text-slate-500">
@@ -253,14 +250,16 @@ function Contact() {
   );
 }
 
-/* Footer — нормальная ширина */
+/* Footer */
 function Footer() {
   return (
     <footer className="py-10 text-sm border-t border-white/5">
       <div className="container max-w-screen flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
-        <div className="text-slate-500">© {new Date().getFullYear()} Andrey — Portfolio</div>
+        <div className="text-slate-500">© {new Date().getFullYear()} Andrey Yehorenkov</div>
         <ul className="flex gap-4 text-slate-400">
           <li><a className="hover:text-white" href="#projects">Projects</a></li>
+          <li><a className="hover:text-white" href="https://github.com/kresherzo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a className="hover:text-white" href="https://www.upwork.com/freelancers/~01bfe6ff4b1b9522d6" target="_blank" rel="noopener noreferrer">Upwork</a></li>
           <li><a className="hover:text-white" href="/privacy.html">Privacy</a></li>
           <li><a className="hover:text-white" href="/terms.html">Terms</a></li>
         </ul>
