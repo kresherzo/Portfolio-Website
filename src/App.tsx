@@ -85,27 +85,36 @@ function Hero() {
         <div>
           <p className="text-xs uppercase tracking-widest text-slate-400">Welcome</p>
           <h1 className="mt-2 text-4xl md:text-6xl font-semibold leading-tight text-white">
-            Modern portfolio hub for clean UI projects.
+            Front-End React Developer. I turn designs into fast, interactive websites.
           </h1>
           <p className="mt-4 text-slate-300 text-base md:text-lg">
-            Minimal, fast and accessible. Explore case studies and live demos.
+            Student at Czech Technical University (ČVUT). Specializing in React, TypeScript, 
+            and Tailwind CSS. Focused on pixel-perfect implementation and clean code.
           </p>
-          <p className="mt-6 text-sm text-slate-400">
-  Available for new projects — landings, dashboards, animations, API integrations, quick fixes.
-</p>
-<div className="mt-4 flex gap-3">
-  <a href="#projects"><Button variant="outline">See projects</Button></a>
-  <a href="#contact"><Button>Contact me</Button></a>
-</div>
-
+          <p className="mt-4 text-sm text-slate-400">
+            Available for new projects — landings, dashboards, animations, API integrations, quick fixes.
+          </p>
+          <div className="mt-6 flex gap-3">
+            <a href="#projects"><Button variant="outline">See projects</Button></a>
+            <a href="#contact"><Button>Hire me on Upwork</Button></a>
+          </div>
         </div>
 
         <div className={clsx(panel, "p-6 shadow-sm")}>
           <div className="text-sm text-slate-400">Highlights</div>
           <ul className="mt-4 space-y-3 text-sm text-slate-300">
-            <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-violet-400" /> Pixel-perfect responsive layouts</li>
-            <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-violet-400" /> 90+ Lighthouse (Desktop)</li>
-            <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-violet-400" /> React + TypeScript + Vite</li>
+            <li className="flex items-center gap-2">
+              <span className="text-lg">⚡</span>
+              <span>Fast delivery (1-3 days for landing)</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-lg">💎</span>
+              <span>Pixel-perfect Figma to React</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-lg">🔧</span>
+              <span>Tech: React + TS + Tailwind</span>
+            </li>
           </ul>
         </div>
       </div>
